@@ -87,7 +87,7 @@ namespace _Calculadora
             {
                 operacion = boton.Text;
                 operando1 = Convert.ToDouble(num.Text);
-                operando1*=Math.PI;
+                operando1*=3.14;
                  num.Text = Convert.ToString(operando1);
             }
             
@@ -104,7 +104,7 @@ namespace _Calculadora
             {
                 operacion = boton.Text;
                 operando1 = Convert.ToDouble(num.Text);
-                operando1 *= Math.E;
+                operando1 *= 2.71;
                 num.Text = Convert.ToString(operando1);
             }
         }
@@ -119,5 +119,42 @@ namespace _Calculadora
             operando1 = 0;
             operando2 = 0;
             num.Text = "0";
-        }   }
+        }
+
+        private void botonSeno(object sender, EventArgs e)
+        {
+            operando1 = Math.Sin(Convert.ToDouble(num.Text));
+            num.Text = Convert.ToString(operando1);
+        }
+
+        private void botonCoseno(object sender, EventArgs e)
+        {
+            operando1 = Math.Cos(Convert.ToDouble(num.Text));
+            num.Text = Convert.ToString(operando1);
+        }
+
+        private void botonTangente(object sender, EventArgs e)
+        {
+            operando1 = Math.Tan(Convert.ToDouble(num.Text));
+            num.Text = Convert.ToString(operando1);
+        }
+
+        private void botonArcoseno(object sender, EventArgs e)
+        {
+            operando1 = Math.Sinh(Convert.ToDouble(num.Text));
+            num.Text = Convert.ToString(operando1);
+        }
+
+        private void botonArcocoseno(object sender, EventArgs e)
+        {
+            operando1 = Math.Cosh(Convert.ToDouble(num.Text));
+            num.Text = Convert.ToString(operando1);
+        }
+
+        private void botonArcotangente(object sender, EventArgs e)
+        {
+            operando1 = Math.Tanh(Convert.ToDouble(num.Text));
+            num.Text = Convert.ToString(operando1);
+        }
+    }
 }
