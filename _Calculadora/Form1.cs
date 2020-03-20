@@ -75,5 +75,49 @@ namespace _Calculadora
             operando1 = Math.Sqrt(operando1);
             num.Text = Convert.ToString(operando1);
         }
-    }
+
+        private void botonPi(object sender, EventArgs e)
+        {
+            Button boton = (Button)sender;
+            if (num.Text == "0")
+            {
+                num.Text = "3,14";
+            }
+            else
+            {
+                operacion = boton.Text;
+                operando1 = Convert.ToDouble(num.Text);
+                operando1*=Math.PI;
+                 num.Text = Convert.ToString(operando1);
+            }
+            
+        }
+
+        private void botonE(object sender, EventArgs e)
+        {
+            Button boton = (Button)sender;
+            if (num.Text == "0")
+            {
+                num.Text = "2,71";
+            }
+            else
+            {
+                operacion = boton.Text;
+                operando1 = Convert.ToDouble(num.Text);
+                operando1 *= Math.E;
+                num.Text = Convert.ToString(operando1);
+            }
+        }
+
+        private void botonComa(object sender, EventArgs e)
+        {          
+            num.Text += ",";
+        }
+
+        private void botonReinicio(object sender, EventArgs e)
+        {
+            operando1 = 0;
+            operando2 = 0;
+            num.Text = "0";
+        }   }
 }
